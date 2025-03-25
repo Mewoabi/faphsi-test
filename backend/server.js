@@ -8,7 +8,12 @@ const app = express();
 const PORT = 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL, // Use the FRONTEND_URL from .env
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Include custom headers
+  credentials: true, // Allow cookies or credentials if needed
+}));
 app.use(bodyParser.json());
 
 // Routes
