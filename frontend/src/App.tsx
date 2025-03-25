@@ -1,7 +1,7 @@
 import { JSX } from 'react'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { UserProvider, useUser } from './contexts/UserContext';
+import { useUser } from './contexts/UserContext';
 import { ProductsProvider } from './contexts/ProductsContext';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';

@@ -1,9 +1,8 @@
 import { Product, useProducts } from '../contexts/ProductsContext';
-import { Card, CardContent, Typography, Grid, CardActionArea, CardActions, Button } from '@mui/material';
+import { Card, CardContent, Typography, Grid,CardActions, Button } from '@mui/material';
 import Navbar from '../components/Navbar';
 import myAxios from '../utils/axios-instance';
 import { useUser } from '../contexts/UserContext';
-import { redirect, useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
   const products = useProducts();
